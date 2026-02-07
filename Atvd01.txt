@@ -1,0 +1,25 @@
+Atividade 01 (ATIV-01)
+Tipo: Diagnóstica.
+Tema: Conceitos básicos de machine learning.
+Conteúdo: Machine learning.
+
+1. Explique, com suas palavras, o que é machine learning?
+-> Um subconjunto da Inteligência Artificial, usado para o processamento e análise de dados por meio de algoritmos e modelos 
+estatísticos.
+
+2. Explique o conceito de conjunto de treinamento, conjunto de validação e conjunto de teste em machine learning.
+-> Um conjunto de treinamento consiste nos dados que usaremos para treinar o modelo de ML, conjunto de validação são os dados usados
+durante o treino para ajustar o modelo e evitar que ele apenas decore os dados (overfitting) e o conjunto de teste é usado apenas 
+ao final, para simular o mundo real com dados que o modelo nunca viu.
+
+3. Explique como você lidaria com dados ausentes em um conjunto de dados de treinamento.
+-> Se poucas linhas ou colunas estiverem com dados ausentes, iria excluí-las. Em outros casos poderia utilizar a imputação, substituindo 
+o valor vazio por uma métrica estatística.
+
+4. O que é uma matriz de confusão e como ela é usada para avaliar o desempenho de um modelo preditivo?
+-> É um método de visualização para resultados de algoritmo classificador, é utilizada comparando os valores previstos com os 
+valores reais de um conjunto de dados.
+
+5. Em quais áreas (tais como construção civil, agricultura, saúde, manufatura,entre outras) você acha mais 
+interessante aplicar algoritmos de machine learning?
+-> Acho interessante a aplicação na área da saúde, como ajuda na deteccção precoce de doenças, tornando possível ajudar muitas pessoas. 
