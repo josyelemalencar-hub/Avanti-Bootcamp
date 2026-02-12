@@ -1,0 +1,59 @@
+Tipo: Somativa;
+
+○ Tema: Algoritmos básicos de programação em linguagem python e análise de dados. 
+
+1. Escreva uma função que receba uma lista de números e retorne outra lista com os números ímpares.
+
+--> lista_num = (1,6,9,13,24)
+for num in lista_num:
+    if num % 2 != 0:
+        print(num)
+
+2. Escreva uma função que receba uma lista de números e retorne outra lista com os números primos presentes.
+--> def filtrar_primos(lista):
+    primos = []
+    for num in lista:
+        if num < 2:
+            continue
+        e_primo = True
+        for i in range(2, int(num**0.5) + 1):
+            if num % i == 0:
+                e_primo = False
+                break
+        if e_primo:
+            primos.append(num)
+    return primos
+lista_num2 = (4, 7, 90, 43, 56, 77, 12, 31)
+print(filtrar_primos(lista_num2)) 
+
+3. Escreva uma função que receba duas listas e retorne outra lista com os elementos que estão presentes em apenas uma das listas.
+--> def elementos_exclusivos(l1, l2):
+    return list(set(l1) ^ set(l2)) 
+
+4. Dada uma lista de números inteiros, escreva uma função para encontrar o segundo maior valor na lista.
+--> def segundo_maior(lista):
+    unicos = list(set(lista)) 
+    unicos.sort()
+    return unicos[-2] if len(unicos) >= 2 else None
+
+5. Crie uma função que receba uma lista de tuplas, cada uma contendo onome e a idade de uma pessoa, e retorne a lista ordenada pelo nome daspessoas em ordem alfabética.
+--> def ordenar_por_nome(lista_pessoas):
+    return sorted(lista_pessoas, key=lambda x: x[0])
+
+6. Como identificar e tratar outliers em uma coluna numérica usando desvio padrão ou quartis?
+--> Desvio Padrão: Considerar outlier o que está acima/abaixo de 3 desvios padrões da média.
+
+7. Como concatenar vários DataFrames (empilhando linhas ou colunas),mesmo que tenham colunas diferentes? Dica: Utiliza-se pd.concat() especificando axis=0 (linhas) ou axis=1(colunas). Quando há colunas diferentes, os valores ausentes são preenchidos com NaN.
+import pandas as pd
+--> df_total = pd.concat([df1, df2], axis=0, sort=False)
+
+8. Utilizando pandas, como realizar a leitura de um arquivo CSV em um DataFrame e exibir as primeiras linhas?
+--> df = pd.read_csv('arquivo.csv')
+print(df.head()) 
+
+9. Utilizando pandas, como selecionar uma coluna específica e filtrar linha sem um “DataFrame” com base em uma condição?
+--> resultado = df.loc[df['Idade'] > 25, 'Nome']
+
+10. Utilizando pandas, como lidar com valores ausentes (NaN) em um DataFrame?
+--> Pode utilizar "df.dropna()" para remover linhas com qualquer valor vazio OU
+"df.fillna()" #que substitui NaN por zero, pela média ou um texto.
